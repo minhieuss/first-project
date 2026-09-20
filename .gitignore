@@ -1,0 +1,11 @@
+# Thư viện nếu sau này bạn dùng npm / nodejs
+node_modules/
+
+# File hệ thống và file cấu hình editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# File môi trường chứa API key / mật khẩu (nếu có)
+.env

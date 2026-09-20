@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại học Bách Khoa Hà Nội - HUST | Một tình yêu, một Bách Khoa</title>
+    <meta name="description" content="Cổng thông tin giới thiệu chính thức Đại học Bách Khoa Hà Nội (HUST) - Trung tâm đào tạo và nghiên cứu khoa học công nghệ hàng đầu Việt Nam.">
+    <meta name="keywords" content="Bách Khoa Hà Nội, HUST, Đại học Bách Khoa, Tuyển sinh Bách Khoa, Đánh giá tư duy, TSA, CNTT Bách Khoa">
+    
+    <!-- Google Fonts: Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hustRed: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            200: '#fecaca',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            700: '#b91c1c',
+                            800: '#991b1b',
+                            900: '#7f1d1d',
+                            950: '#450a0a',
+                        },
+                        hustNavy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        hustGold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-red-700 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-red-900 via-hustRed-800 to-red-950 text-white text-xs py-2 px-4 border-b border-red-700/50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 font-medium">
+            <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-bold text-[10px] uppercase">Tin mới</span>
+                <span>Tuyển sinh Đại học chính quy: Đăng ký tham gia Kỳ thi Đánh giá tư duy (TSA)</span>
+            </div>
+            <div class="flex items-center gap-4 text-slate-200 text-[11px]">
+                <span class="flex items-center gap-1"><i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i> (+84) 938 69 2015</span>
+                <span class="hidden md:inline text-slate-400">|</span>
+                <a href="#contact" class="hover:text-amber-300 transition-colors flex items-center gap-1">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i> Số 1 Đại Cồ Việt, Hà Nội
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav id="main-navbar" class="sticky top-0 z-40 w-full glass-nav border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & University Name -->
+                <a href="#" class="flex items-center gap-3.5 group">
+                    <div class="w-12 h-12 rounded-xl bg-hustRed-700 text-white flex items-center justify-center shadow-md shadow-red-700/30 group-hover:scale-105 transition-transform duration-300">
+                        <!-- Custom HUST Emblem SVG -->
+                        <svg class="w-7 h-7 fill-current text-white" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-8-5zm0 2.18l6 3.75v8.07c0 4.1-2.73 7.95-6 9-3.27-1.05-6-4.9-6-9V7.93l6-3.75zM12 6a2 2 0 100 4 2 2 0 000-4zm-3 7h6v2H9v-2zm-1 3h8v2H8v-2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-lg lg:text-xl font-extrabold tracking-tight text-slate-900 leading-none group-hover:text-hustRed-700 transition-colors">
+                            ĐẠI HỌC BÁCH KHOA HÀ NỘI
+                        </div>
+                        <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider font-mono mt-1">
+                            Hanoi University of Science and Technology
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Menu -->
+                <div class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
+                    <a href="#about" class="nav-link hover:text-hustRed-700 transition-colors">Giới thiệu</a>
+                    <a href="#schools" class="nav-link hover:text-hustRed-700 transition-colors">Trường & Viện</a>
+                    <a href="#majors" class="nav-link hover:text-hustRed-700 transition-colors">Ngành đào tạo</a>
+                    <a href="#admissions" class="nav-link hover:text-hustRed-700 transition-colors">Tuyển sinh</a>
+                    <a href="#campus" class="nav-link hover:text-hustRed-700 transition-colors">Đời sống BK</a>
+                    <a href="#quiz" class="nav-link px-3 py-1.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition-colors flex items-center gap-1.5">
+                        <i data-lucide="compass" class="w-4 h-4 text-amber-600"></i>
+                        <span>Gợi ý ngành</span>
+                    </a>
+                </div>
+
+                <!-- Action Button -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-hustRed-700 hover:bg-hustRed-800 text-white text-sm font-bold shadow-md shadow-red-700/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>Tư vấn tuyển sinh</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="nav-link block py-2 text-base font-semibold text-slate-800 hover:text-hustRed-700">Giới thiệu</a>
+            <a href="#schools" class="nav-link block py-2 text-base font-semibold text-slate-800 hover:text-hustRed-700">Trường & Viện thành viên</a>
+            <a href="#majors" class="nav-link block py-2 text-base font-semibold text-slate-800 hover:text-hustRed-700">Tra cứu ngành học</a>
+            <a href="#admissions" class="nav-link block py-2 text-base font-semibold text-slate-800 hover:text-hustRed-700">Phương thức tuyển sinh</a>
+            <a href="#campus" class="nav-link block py-2 text-base font-semibold text-slate-800 hover:text-hustRed-700">Khuôn viên & Đời sống BK</a>
+            <a href="#quiz" class="nav-link block py-2 text-base font-semibold text-amber-700">Trắc nghiệm chọn ngành HUST</a>
+            <a href="#contact" class="nav-link block py-2 text-base font-semibold text-hustRed-700">Liên hệ & Tư vấn</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-hust-dark-gradient text-white overflow-hidden py-20 lg:py-32">
+        <!-- Subtle Grid Pattern Background -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        
+        <!-- Glowing Ambient Circles -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-amber-300 text-xs font-semibold uppercase tracking-wider animate-floating">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        <span>Đại học Kỹ thuật Trọng điểm Quốc gia • Từ năm 1956</span>
+                    </div>
+
+                    <!-- Main Slogan & Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                        Một tình yêu, <br class="hidden sm:inline">
+                        <span class="text-gradient-gold">Một Bách Khoa.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+                        Cái nôi đào tạo tinh hoa, nghiên cứu khoa học đỉnh cao và chuyển giao công nghệ hàng đầu Việt Nam. Nơi hun đúc bản lĩnh người kỹ sư phụng sự Tổ quốc và vươn tầm toàn cầu.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="#majors" class="px-7 py-3.5 rounded-xl bg-hustRed-600 hover:bg-hustRed-700 text-white font-bold text-sm shadow-xl shadow-red-600/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <i data-lucide="search" class="w-4 h-4"></i>
+                            <span>Khám phá 75+ Ngành học</span>
+                        </a>
+                        <a href="#quiz" class="px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-sm transition-all flex items-center gap-2">
+                            <i data-lucide="compass" class="w-4 h-4 text-amber-400"></i>
+                            <span>Trắc nghiệm ngành phù hợp</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Points -->
+                    <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-300 font-medium">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Kiểm định chất lượng HCÉRES (Châu Âu)</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Chuẩn kiểm định quốc tế ABET & AUN-QA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Parabol Arch & Campus Impression -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Card with Image -->
+                        <div class="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="Tòa nhà C1 Bách Khoa Hà Nội" class="w-full h-96 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                            
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <div class="text-xs font-mono uppercase tracking-wider text-amber-300 mb-1">Trái tim Bách Khoa</div>
+                                <h3 class="text-xl font-bold">Tòa nhà C1 & Quảng trường Lịch sử</h3>
+                                <p class="text-xs text-slate-300 mt-1">Nơi khởi nguồn ước mơ của hơn 200.000 kỹ sư và nhà khoa học Việt Nam.</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat Badge 1 -->
+                        <div class="absolute -top-6 -left-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-white text-slate-900 flex items-center gap-3 animate-floating">
+                            <div class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-semibold">QS World Ranking</div>
+                                <div class="text-sm font-bold text-slate-900">#1 Kỹ thuật & Công nghệ VN</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat Badge 2 -->
+                        <div class="absolute -bottom-6 -right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-white text-slate-900 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center">
+                                <i data-lucide="briefcase" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-semibold">Tỷ lệ việc làm sau ra trường</div>
+                                <div class="text-sm font-bold text-emerald-600">98.6% Có việc làm ngay</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div id="stats-grid" class="mt-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 pt-10 border-t border-white/15">
+                <!-- Javascript will render stats here -->
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION: GIỚI THIỆU CHUNG (ABOUT HUST) -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="landmark" class="w-3.5 h-3.5"></i> Về Đại học Bách Khoa Hà Nội
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                    Gần 70 Năm Khẳng Định <br>
+                    <span class="text-gradient-hust">Vị Thế Đại Học Kỹ Thuật Số 1</span>
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Được thành lập từ năm 1956, Đại học Bách Khoa Hà Nội luôn giữ vị trí tiên phong trong hệ thống giáo dục đại học Việt Nam, đào tạo nguồn nhân lực chất lượng cao và dẫn dắt các nghiên cứu khoa học công nghệ phụng sự đất nước.
+                </p>
+            </div>
+
+            <!-- 2-Column Story: Mission & History Highlights -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                <div class="space-y-6">
+                    <div class="border-l-4 border-hustRed-700 pl-4">
+                        <div class="text-xs font-mono uppercase text-slate-400 font-semibold">Sứ mệnh cao cả</div>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1">
+                            Phát triển con người, đào tạo nhân tài và bồi dưỡng nhân lực chất lượng cao
+                        </h3>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Đại học Bách Khoa Hà Nội cam kết kiến tạo một môi trường giáo dục đại học đổi mới sáng tạo, nơi tinh hoa tri thức và công nghệ hội tụ. Trường không chỉ trang bị kiến thức chuyên môn sâu rộng mà còn rèn luyện cho sinh viên tư duy phản biện, năng lực tự học suốt đời và phẩm chất đạo đức chính trực.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="text-2xl font-black text-hustRed-700 font-mono">200.000+</div>
+                            <div class="text-xs text-slate-600 font-medium mt-1">Kỹ sư, thạc sĩ, tiến sĩ đã tốt nghiệp phục vụ đất nước</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="text-2xl font-black text-amber-600 font-mono">70+</div>
+                            <div class="text-xs text-slate-600 font-medium mt-1">Phòng thí nghiệm trọng điểm & hợp tác quốc tế</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Sinh viên Bách Khoa tại Thư viện Tạ Quang Bửu" class="w-full h-80 object-cover">
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white shadow-xl border border-slate-100 max-w-sm ml-auto -mt-16 relative z-10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                                <i data-lucide="quote" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold italic text-slate-700">"Đoàn kết chặt chẽ, cố gắng học tập, tiến bộ không ngừng..."</p>
+                                <p class="text-[11px] font-bold text-hustRed-700 mt-1">— Lời căn dặn của Bác Hồ khi về thăm Bách Khoa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Values -->
+            <div>
+                <h3 class="text-xl font-bold text-center text-slate-900 mb-8">4 Giá Trị Cốt Lõi Của Người Bách Khoa</h3>
+                <div id="core-values-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Javascript will render core values here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CÁC TRƯỜNG & VIỆN THÀNH VIÊN (ACADEMIC UNITS) -->
+    <section id="schools" class="py-24 bg-slate-100/70 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="layers" class="w-3.5 h-3.5"></i> Cơ Cấu Đào Tạo
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                    Các Trường & Viện Đào Tạo Thành Viên
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Theo mô hình đại học đa ngành tự chủ hiện đại, HUST gồm 5 Trường nòng cốt và các Viện/Khoa đào tạo chuyên sâu trong các lĩnh vực công nghệ mũi nhọn.
+                </p>
+            </div>
+
+            <div id="schools-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Javascript will render school cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TRA CỨU NGÀNH HỌC & ĐIỂM CHUẨN THAM KHẢO (MAJORS) -->
+    <section id="majors" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="book-marked" class="w-3.5 h-3.5"></i> Chương Trình Đào Tạo
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                    Tra Cứu Mã Ngành & Chuẩn Đầu Ra
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Hơn 75 chương trình đào tạo chuẩn, tiên tiến (Elitech), và liên kết quốc tế được thiết kế theo chuẩn kiểm định ABET (Hoa Kỳ) và AUN-QA.
+                </p>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="max-w-4xl mx-auto mb-10 space-y-4">
+                <!-- Search Input -->
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </div>
+                    <input type="text" id="major-search-input" placeholder="Tìm theo tên ngành, mã xét tuyển (IT1, EE2, ME1...), hoặc từ khóa (AI, Bán dẫn, Ô tô, Robot...)" 
+                           class="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-slate-300 focus:border-red-600 focus:ring-4 focus:ring-red-100 outline-none text-sm transition-all shadow-sm">
+                </div>
+
+                <!-- Category Pills -->
+                <div class="flex flex-wrap gap-2 justify-center text-xs font-semibold">
+                    <button class="filter-btn active px-4 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="all">
+                        Tất cả các ngành
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="soict">
+                        CNTT & AI (SoICT)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="seee">
+                        Điện tử & Bán dẫn (SEEE)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="sme">
+                        Cơ khí & Ô tô (SME)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="scls">
+                        Hóa & KH Sự sống (SCLS)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="smse">
+                        Vật liệu (SMSE)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="sem">
+                        Kinh tế & Quản lý (SEM)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="sofl">
+                        Ngoại ngữ (SOFL)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Majors Grid Container -->
+            <div id="majors-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Javascript will render major cards here -->
+            </div>
+
+            <!-- Empty State if no match -->
+            <div id="majors-empty-state" class="hidden text-center py-16 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
+                <i data-lucide="search-x" class="w-12 h-12 text-slate-400 mx-auto mb-3"></i>
+                <h4 class="text-base font-bold text-slate-700">Không tìm thấy ngành học phù hợp</h4>
+                <p class="text-xs text-slate-500 mt-1">Vui lòng thử tìm với từ khóa khác như "IT1", "Điện", "Cơ khí", "Hóa", "Kinh tế"...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MINI QUIZ (TÌM NGÀNH PHÙ HỢP) -->
+    <section id="quiz" class="py-24 bg-gradient-to-br from-slate-900 via-slate-950 to-red-950 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="compass" class="w-3.5 h-3.5"></i> Định Hướng Nghề Nghiệp
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-4">
+                    Bạn Hợp Với Trường & Ngành Nào Tại Bách Khoa?
+                </h2>
+                <p class="text-slate-300 text-sm max-w-xl mx-auto">
+                    Trả lời 4 câu hỏi trắc nghiệm nhanh để khám phá lĩnh vực kỹ thuật - công nghệ phù hợp nhất với thế mạnh và đam mê của bạn!
+                </p>
+            </div>
+
+            <!-- Quiz Card Container -->
+            <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl border border-white/20">
+                <!-- Step Question Box -->
+                <div id="quiz-card-step">
+                    <!-- Progress bar -->
+                    <div class="mb-6">
+                        <div class="flex items-center justify-between text-xs font-bold text-slate-500 mb-2">
+                            <span id="quiz-step-label">Câu hỏi 1 / 4</span>
+                            <span class="text-red-700">Trắc nghiệm HUST</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                            <div id="quiz-progress-bar" class="bg-hustRed-700 h-2.5 rounded-full transition-all duration-300" style="width: 25%"></div>
+                        </div>
+                    </div>
+
+                    <h3 id="quiz-question-title" class="text-lg sm:text-xl font-bold text-slate-900 mb-6 leading-snug">
+                        Đang tải câu hỏi...
+                    </h3>
+
+                    <!-- Options list -->
+                    <div id="quiz-options-container" class="space-y-3">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Result Box (Hidden by default) -->
+                <div id="quiz-result-box" class="hidden text-center py-4 space-y-6">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-red-100 text-red-700 flex items-center justify-center">
+                        <i data-lucide="sparkles" class="w-8 h-8"></i>
+                    </div>
+
+                    <div>
+                        <span id="quiz-result-badge" class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wide">
+                            Gợi ý lĩnh vực
+                        </span>
+                        <h3 id="quiz-result-title" class="text-2xl font-black text-slate-900 mt-2 mb-2">
+                            Kết quả phù hợp
+                        </h3>
+                        <p id="quiz-result-desc" class="text-slate-600 text-sm max-w-lg mx-auto leading-relaxed">
+                            Mô tả chi tiết kết quả...
+                        </p>
+                    </div>
+
+                    <div class="pt-4 text-left">
+                        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Các ngành gợi ý tiêu biểu dành cho bạn:</div>
+                        <div id="quiz-suggested-majors" class="space-y-2">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex justify-center gap-3">
+                        <button id="quiz-restart-btn" class="px-6 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-700 font-semibold text-xs transition-all flex items-center gap-2">
+                            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                            <span>Làm lại trắc nghiệm</span>
+                        </button>
+                        <a href="#majors" class="px-6 py-2.5 rounded-xl bg-red-700 hover:bg-red-800 text-white font-bold text-xs transition-all flex items-center gap-2">
+                            <span>Xem thông tin tuyển sinh ngành này</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PHƯƠNG THỨC TUYỂN SINH (ADMISSIONS) -->
+    <section id="admissions" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="file-check" class="w-3.5 h-3.5"></i> Cổng Tuyển Sinh
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                    3 Phương Thức Xét Tuyển Chính Thức
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Đại học Bách Khoa Hà Nội áp dụng các phương thức tuyển sinh hiện đại, công bằng, nhằm lựa chọn những thí sinh có năng lực tư duy xuất sắc nhất.
+                </p>
+            </div>
+
+            <div id="admissions-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Javascript will render admissions methods here -->
+            </div>
+
+            <!-- TSA Examination Highlight Card -->
+            <div class="rounded-3xl bg-gradient-to-r from-red-800 to-hustRed-950 text-white p-8 lg:p-12 shadow-xl relative overflow-hidden">
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <span class="px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-extrabold uppercase">
+                            Đặc quyền thí sinh
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-black">
+                            Kỳ Thi Đánh Giá Tư Duy (TSA) - Tấm Vé Vào Bách Khoa
+                        </h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Bài thi TSA không kiểm tra khả năng học vẹt kiến thức mà tập trung đánh giá 3 trụ cột tư duy cốt lõi: <strong>Tư duy Toán học, Tư duy Đọc hiểu và Tư duy Khoa học/Giải quyết vấn đề</strong>. Kết quả TSA được công nhận bởi hơn 40 trường đại học hàng đầu cả nước.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="https://tsa.hust.edu.vn" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-white text-red-800 hover:bg-slate-100 font-bold text-xs transition-all flex items-center gap-2">
+                                <span>Cổng thông tin thi TSA</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            </a>
+                            <a href="#contact" class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs transition-all flex items-center gap-2">
+                                <span>Tư vấn đăng ký ôn luyện</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-center space-y-3 w-full">
+                            <i data-lucide="laptop" class="w-10 h-10 text-amber-300 mx-auto"></i>
+                            <div class="text-xl font-bold font-mono">100% TRÊN MÁY TÍNH</div>
+                            <p class="text-xs text-slate-300">Biết kết quả nhanh chóng, minh bạch và an toàn tuyệt đối</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: LỊCH SỬ PHÁT TRIỂN (TIMELINE) -->
+    <section class="py-24 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="history" class="w-3.5 h-3.5"></i> Dấu Ấn Thời Gian
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                    Lịch Sử Hình Thành & Phát Triển
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Hành trình vẻ vang gắn liền với lịch sử đấu tranh giải phóng dân tộc và công cuộc xây dựng, phát triển đất nước Việt Nam.
+                </p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative">
+                <div class="timeline-stem"></div>
+                <div id="timeline-container">
+                    <!-- Javascript will render timeline items here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ĐỜI SỐNG KHUÔN VIÊN & HOẠT ĐỘNG SINH VIÊN (CAMPUS LIFE) -->
+    <section id="campus" class="py-24 bg-slate-100/70 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="camera" class="w-3.5 h-3.5"></i> Không Gian & Trải Nghiệm
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                    Khám Phá Khuôn Viên & Đời Sống Sinh Viên
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Một không gian đại học xanh mát rộng 26 héc-ta giữa lòng Thủ đô với hệ sinh thái thư viện hiện đại, sân vận động tiêu chuẩn, ký túc xá và hàng trăm câu lạc bộ năng động.
+                </p>
+            </div>
+
+            <!-- Campus Gallery -->
+            <div id="campus-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Javascript will render campus gallery cards here -->
+            </div>
+
+            <!-- Highlights Banner: Clubs & Activities -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-red-700 flex items-center justify-center shrink-0">
+                        <i data-lucide="bot" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-slate-900 mb-1">CLB Nghiên cứu & Robocon</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Nơi sinh viên Bách Khoa chế tạo robot tự hành, tham gia các cuộc thi công nghệ quốc tế và đạt giải vô địch Robocon châu Á.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                        <i data-lucide="library" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Thư viện TQB Hiện Đại</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Tòa nhà 10 tầng với hơn 1 triệu đầu sách, phòng tự học yên tĩnh 24/7 và hệ thống tra cứu tài liệu học thuật trực tuyến toàn cầu.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                        <i data-lucide="trophy" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Phong Trào Thể Thao & Đoàn Hội</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Giải bóng đá sinh viên HUST Cup cuồng nhiệt, các chiến dịch tình nguyện Mùa hè xanh và hơn 50 CLB nghệ thuật, võ thuật, kỹ năng mềm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: LIÊN HỆ & TƯ VẤN TRỰC TUYẾN (CONTACT) -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left: Contact Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wider">
+                        <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Kết Nối Với Chúng Tôi
+                    </div>
+
+                    <h2 class="text-3xl font-black text-slate-900 tracking-tight leading-tight">
+                        Bạn Cần Tư Vấn <br>
+                        <span class="text-gradient-hust">Về Tuyển Sinh & Ngành Học?</span>
+                    </h2>
+
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Ban Tuyển sinh và Hướng nghiệp Đại học Bách Khoa Hà Nội luôn sẵn sàng đồng hành, giải đáp mọi thắc mắc của quý phụ huynh và các bạn học sinh.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-3.5 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-red-100 text-red-700 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-semibold uppercase">Địa chỉ chính</div>
+                                <div class="text-sm font-bold text-slate-900">Số 1 Đại Cồ Việt, Quận Hai Bà Trưng, Hà Nội</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-semibold uppercase">Hotline Tư Vấn Tuyển Sinh</div>
+                                <div class="text-sm font-bold text-red-700">(+84) 938 69 2015 • (+84) 24 3869 4242</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-semibold uppercase">Email Hỗ Trợ</div>
+                                <div class="text-sm font-bold text-slate-900">tuyensinh@hust.edu.vn • ctsv@hust.edu.vn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Consultation Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Gửi Yêu Cầu Tư Vấn Trực Tuyến</h3>
+                        <p class="text-xs text-slate-500 mb-6">Điền thông tin bên dưới để nhận cẩm nang tuyển sinh và điểm chuẩn qua email.</p>
+
+                        <form id="hust-contact-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Họ và tên thí sinh *</label>
+                                    <input type="text" required placeholder="Ví dụ: Nguyễn Văn An" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-red-600 focus:ring-2 focus:ring-red-100 outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Số điện thoại *</label>
+                                    <input type="tel" required placeholder="Ví dụ: 0987 654 321" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-red-600 focus:ring-2 focus:ring-red-100 outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Địa chỉ Email *</label>
+                                    <input type="email" required placeholder="an.nguyen@gmail.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-red-600 focus:ring-2 focus:ring-red-100 outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Lĩnh vực quan tâm</label>
+                                    <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-red-600 focus:ring-2 focus:ring-red-100 outline-none bg-white">
+                                        <option value="soict">Công nghệ Thông tin & AI (SoICT)</option>
+                                        <option value="seee">Điện tử - Viễn thông & Bán dẫn (SEEE)</option>
+                                        <option value="sme">Cơ điện tử, Cơ khí & Ô tô (SME)</option>
+                                        <option value="scls">Hóa học, Sinh học & Thực phẩm (SCLS)</option>
+                                        <option value="smse">Khoa học Vật liệu Tiên tiến (SMSE)</option>
+                                        <option value="sem">Kinh tế & Quản lý (SEM)</option>
+                                        <option value="tsa">Kỳ thi Đánh giá tư duy (TSA)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Câu hỏi hoặc nội dung cần giải đáp</label>
+                                <textarea rows="4" placeholder="Bạn muốn hỏi thêm về phương thức xét tuyển, cơ hội học bổng hay học phí..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-red-600 focus:ring-2 focus:ring-red-100 outline-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-hustRed-700 hover:bg-hustRed-800 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Gửi thông tin tư vấn</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+                <!-- Col 1: Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-red-700 text-white flex items-center justify-center font-bold">
+                            BK
+                        </div>
+                        <div>
+                            <div class="text-base font-extrabold leading-none">ĐẠI HỌC BÁCH KHOA HÀ NỘI</div>
+                            <div class="text-[10px] text-slate-400 font-mono mt-1">HANOI UNIVERSITY OF SCIENCE AND TECHNOLOGY</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                        Đại học công lập tự chủ trọng điểm quốc gia, giữ vai trò đầu tàu trong đào tạo nguồn nhân lực khoa học công nghệ chất lượng cao phục vụ sự nghiệp hiện đại hóa đất nước.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2 text-slate-400">
+                        <a href="https://facebook.com/dhbkhanoi" target="_blank" class="w-8 h-8 rounded-full bg-slate-900 hover:bg-red-700 hover:text-white flex items-center justify-center transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://youtube.com/c/HUSTChannel" target="_blank" class="w-8 h-8 rounded-full bg-slate-900 hover:bg-red-700 hover:text-white flex items-center justify-center transition-colors">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://linkedin.com/school/hust-vietnam" target="_blank" class="w-8 h-8 rounded-full bg-slate-900 hover:bg-red-700 hover:text-white flex items-center justify-center transition-colors">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://hust.edu.vn" target="_blank" class="w-8 h-8 rounded-full bg-slate-900 hover:bg-red-700 hover:text-white flex items-center justify-center transition-colors">
+                            <i data-lucide="globe" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Liên kết nhanh -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-red-600 pl-2">Liên kết nhanh</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">Về Đại học Bách Khoa</a></li>
+                        <li><a href="#schools" class="hover:text-amber-400 transition-colors">Các Trường & Viện đào tạo</a></li>
+                        <li><a href="#majors" class="hover:text-amber-400 transition-colors">Danh mục 75+ mã ngành</a></li>
+                        <li><a href="#admissions" class="hover:text-amber-400 transition-colors">Phương thức tuyển sinh</a></li>
+                        <li><a href="#quiz" class="hover:text-amber-400 transition-colors">Trắc nghiệm định hướng</a></li>
+                        <li><a href="#campus" class="hover:text-amber-400 transition-colors">Khuôn viên & Thư viện TQB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Các cổng thông tin -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-red-600 pl-2">Cổng thông tin HUST</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="https://ts.hust.edu.vn" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1"><span>Cổng Tuyển sinh</span> <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
+                        <li><a href="https://tsa.hust.edu.vn" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1"><span>Thi Đánh giá tư duy (TSA)</span> <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
+                        <li><a href="https://ctsv.hust.edu.vn" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1"><span>Cổng Thông tin Sinh viên</span> <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
+                        <li><a href="https://library.hust.edu.vn" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1"><span>Thư viện Tạ Quang Bửu</span> <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
+                        <li><a href="https://alumni.hust.edu.vn" target="_blank" class="hover:text-amber-400 transition-colors flex items-center gap-1"><span>Mạng lưới Cựu sinh viên</span> <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Thông tin liên hệ -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-red-600 pl-2">Thông tin liên hệ</h4>
+                    <div class="space-y-2.5 text-xs text-slate-400">
+                        <p class="leading-relaxed"><strong class="text-slate-200">Địa chỉ:</strong> Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
+                        <p><strong class="text-slate-200">Điện thoại:</strong> (+84) 24 3869 4242</p>
+                        <p><strong class="text-slate-200">Hotline:</strong> (+84) 938 69 2015</p>
+                        <p><strong class="text-slate-200">Email:</strong> hust@hust.edu.vn</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <div>© 2026 Đại học Bách Khoa Hà Nội. Bản quyền thuộc về HUST.</div>
+                <div class="text-[11px] text-slate-600">Được xây dựng phục vụ giới thiệu và định hướng tương lai cho thế hệ kỹ sư Việt Nam.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- UNIVERSAL MODAL (FOR SCHOOLS, MAJORS, CAMPUS PHOTOS) -->
+    <div id="universal-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-hidden modal-overlay bg-slate-950/70 backdrop-blur-sm">
+        <div class="modal-content bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden border border-slate-200 max-h-[90vh] flex flex-col">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                <h3 id="modal-title" class="text-lg font-bold text-slate-900">Chi tiết</h3>
+                <button onclick="closeUniversalModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div id="modal-body" class="p-6 overflow-y-auto space-y-4">
+                <!-- Content injected dynamically -->
+            </div>
+            <!-- Modal Footer -->
+            <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end">
+                <button onclick="closeUniversalModal()" class="px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-colors">
+                    Đóng cửa sổ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast-notification" class="fixed bottom-6 right-6 z-50 max-w-md p-4 rounded-2xl bg-slate-900 text-white shadow-2xl border border-slate-700 flex items-start gap-3 hide-toast">
+        <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+        </div>
+        <div>
+            <h5 class="text-sm font-bold text-white">Gửi thông tin thành công!</h5>
+            <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">Ban Tư vấn Tuyển sinh Đại học Bách Khoa Hà Nội đã ghi nhận yêu cầu và sẽ liên hệ lại với bạn trong thời gian sớm nhất.</p>
+        </div>
+    </div>
+
+    <!-- Data & Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

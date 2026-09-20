@@ -1,0 +1,180 @@
+/* Custom Styles & Design System for HUST Website */
+
+:root {
+    --hust-red-primary: #B91C1C;
+    --hust-red-dark: #881337;
+    --hust-red-deep: #7F1D1D;
+    --hust-gold: #F59E0B;
+    --hust-gold-dark: #D97706;
+    --hust-navy-dark: #0F172A;
+    --hust-slate: #1E293B;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+}
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+    border: 2px solid #F1F5F9;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}
+
+/* Base Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Brand Gradients */
+.bg-hust-gradient {
+    background: linear-gradient(135deg, #991B1B 0%, #B91C1C 50%, #C2410C 100%);
+}
+
+.bg-hust-dark-gradient {
+    background: linear-gradient(145deg, #0F172A 0%, #1E1B4B 60%, #311018 100%);
+}
+
+.text-gradient-hust {
+    background: linear-gradient(135deg, #DC2626 0%, #EA580C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-card-dark {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Parabol Arch Graphic Element */
+.parabol-curve {
+    border-radius: 0 0 50% 50% / 0 0 25px 25px;
+}
+
+/* Card Hover Elevation */
+.card-hover-effect {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover-effect:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Pulse Glow Animation */
+@keyframes subtle-glow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(185, 28, 28, 0.25);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(185, 28, 28, 0.45);
+    }
+}
+.animate-subtle-glow {
+    animation: subtle-glow 3s infinite ease-in-out;
+}
+
+/* Floating Badges Animation */
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+.animate-floating {
+    animation: floating 4s ease-in-out infinite;
+}
+
+/* Timeline Vertical Line */
+.timeline-stem {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #DC2626, #F59E0B, #DC2626);
+}
+
+@media (min-width: 768px) {
+    .timeline-stem {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Badge Styling */
+.hust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Interactive Major Filter Buttons */
+.filter-btn {
+    transition: all 0.2s ease;
+}
+.filter-btn.active {
+    background-color: #B91C1C;
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
+}
+
+/* Modal Transitions */
+.modal-overlay {
+    transition: opacity 0.3s ease;
+}
+.modal-content {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+.modal-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-hidden .modal-content {
+    transform: scale(0.95) translateY(10px);
+}
+
+/* Toast Notification */
+#toast-notification {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+#toast-notification.hide-toast {
+    transform: translateY(100px);
+    opacity: 0;
+    pointer-events: none;
+}
